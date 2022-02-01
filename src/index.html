@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <title>Magic photos</title>
+  </head>
+
+  <body class="page__body">
+    @@include('html/header.html', {})
+    <main class="main">
+      <div class="search">
+        <div class="container  search__container">
+          <img class="logo" src="img/eDAEmma1Xxk.jpg" alt="">
+          <form class="search__form">
+            <button class="search__random-button" type="button" aria-label="random button"></button>
+            <input type="search" class="search__input" placeholder="search...(EN)" autofocus aria-label="searching" autocomplete="off">
+          </form>
+        </div>
+      </div>
+      <div class="gallery">
+        <div class="container">
+          <ul class="gallery__list">
+          </ul>
+        </div>
+      </div>
+    </main>
+    @@include('html/footer.html', {})
+    <script src="js/app.min.js" type="module"></script>
+  </body>
+</html>

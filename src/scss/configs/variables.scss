@@ -1,0 +1,24 @@
+:root {
+  --basic-white: #ffffff;
+  --basic-white-to-special: #ffffff;
+  --basic-black: #000000;
+  --basic-black-to-special: #000000;
+  --basic-black-const: #000000;
+  --basic-black-a50: rgb(0 0 0 / 50%);
+  --special: #bdae82;
+  --special-to-white: #bdae82;
+  --special-to-black: #bdae82;
+}
+
+:root.page--light-theme {
+  --basic-white: #1c1c1c;
+  --basic-black: #ffffff;
+  --basic-black-a50: rgb(255 255 255 / 50%);
+  --basic-white-to-special: #bdae82;
+  --special-to-white: #ffffff;
+  --special-to-black: #1c1c1c;
+  --basic-black-to-special: #bdae82;
+}
+
+$laptop-width: 1440px;
+$tablet-width: 768px;

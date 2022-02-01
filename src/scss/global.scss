@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit; // моя идея
+  text-decoration: none;
+}
+
+.page {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  display: grid; // для прибития футера
+  grid-template-rows: min-content 1fr min-content; // header main(растягивается) footer
+  min-height: 100%;
+  margin: 0;
+  color: var(--basic-black);
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 36px;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%; /* чтобы картинка не стала больше чем её контейнер */
+  height: auto; /* картинка сохраняет пропорции */
+  vertical-align: top; // убрать отступы как инлайнового элемента - от FLS
+}
+
+// Можно сделать дополнительный сброс для кнопок
+
+button {
+  padding: 0;
+  border: none; /* в норме есть обводка */
+  font: inherit; /* в норме monospace */
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 768px;
+    padding: 0 64px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 20px;
+  }
+}
+
+.button {
+  position: relative;
+  display: block;
+  width: 220px;
+  padding: 9px;
+  overflow: hidden;
+  color: var(--basic-black-const);
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  background-color: var(--special);
+  cursor: pointer;
+  transition: color 200ms ease 0s, background-color 200ms ease 0s,
+    border-color 200ms ease 0s;
+
+  &:hover,
+  &:focus {
+    color: var(--basic-white-to-special);
+    background-color: var(--special-to-black);
+  }
+
+  @media (max-width: 550px) {
+    width: 180px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}

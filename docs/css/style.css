@@ -166,6 +166,11 @@ button {
      object-fit: cover;
   border-radius: 50%;
 }
+@media (max-width: 450px) {
+  .logo {
+    display: none;
+  }
+}
 
 .gallery__list {
   display: grid;
@@ -214,6 +219,12 @@ button {
   display: flex;
   align-items: center;
 }
+@media (max-width: 450px) {
+  .search__form {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
 
 .search__container {
   display: flex;
@@ -222,7 +233,7 @@ button {
 }
 
 .search__input {
-  width: 300px;
+  max-width: 300px;
   height: 30px;
   padding: 0 15px;
   border: 2px solid #bdbcbc;
@@ -243,7 +254,7 @@ button {
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
-.search__random-button:hover, .search__random-button:focus {
+.search__random-button:hover {
   -webkit-animation-name: magic;
           animation-name: magic;
   -webkit-animation-play-state: running;
@@ -252,7 +263,7 @@ button {
 
 @-webkit-keyframes magic {
   from {
-    transform: translate(0px, 0);
+    transform: translate(0, 0);
   }
   20% {
     transform: translate(2px, 0);
@@ -267,13 +278,13 @@ button {
     transform: translate(-2px, 0);
   }
   to {
-    transform: translate(0px, 0);
+    transform: translate(0, 0);
   }
 }
 
 @keyframes magic {
   from {
-    transform: translate(0px, 0);
+    transform: translate(0, 0);
   }
   20% {
     transform: translate(2px, 0);
@@ -288,7 +299,7 @@ button {
     transform: translate(-2px, 0);
   }
   to {
-    transform: translate(0px, 0);
+    transform: translate(0, 0);
   }
 }
 .footer {

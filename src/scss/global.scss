@@ -112,4 +112,8 @@ button {
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
+
+  @media (max-width: 450px) {
+    display: none;
+  }
 }
